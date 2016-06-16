@@ -1,0 +1,118 @@
+<!-- using the <form> element, text input, password input, text areas, radio buttons, checkboxes, dropdown lists, multiple select boxes, file input, submit buttons/images, <button> element, hidden form controls, labelling in forms, grouping with <fieldset>, HTML5 form validation, date input, email & URL input & search input -->
+
+<html>
+    <head>
+        <title>Forms</title>
+    </head>
+    <body>
+        <form action="http://www.example.com/review.php" method="post">             <!-- use <form> to declare a form. "action" attribute is where the form will be sent. "method" attribute is the sending method -->
+            <fieldset>                                                              <!-- use <fieldset> elements to group parts of the form -->
+                <legend>Your Details:</legend>                                      <!-- <legend> gives each fieldset a title -->
+                <label>                                                             <!-- <label> describes each form control and wraps around each one. The input will display the same without <label> -->
+                    Name:
+                    <input type="text" name="name" size="30" maxlength="100">       <!-- "type" specifies which input is in use. "name" tells the server which form control the data was entered into (acts as an id) -->
+                </label>
+                <br />
+                
+                <label>
+                    Email:
+                    <input type="email" name="email" size="30" maxlength="100">      <!-- "email" verifies the input. "size" is now controlled by CSS. "maxLength" limits # of characters (e.g. when entering a date) -->
+                </label>
+                <br />
+            </fieldset>
+            <br />
+            
+            <fieldset>
+                <legend>Your Review:</legend>
+                <p>
+                    <label for="hear-about">                                        <!-- <label> can also be used externally to its associated element if referencing the associated element's id with "for" attribute -->
+                        How did you hear about us?
+                    </label>
+                    <select name="referrer" id="hear-about">                        <!-- <select> creates a dropdown menu -->
+                        <option value="google">Google</option>                      <!-- <option> specifies an option in the dropdown -->
+                        <option value="friend">Friend</option>
+                        <option value="advert">Advert</option>
+                        <option value="other">Other</option>
+                    </select>
+                </p>
+                
+                <p>
+                    Would you visit again?
+                    <br />
+                    <label>
+                        <input type="radio" name="rating" value="yes">              <!-- use "radio" value with "type" attribute to create radio buttons -->
+                        Yes
+                    </label>
+                    <label>
+                        <input type="radio" name="rating" value="no">
+                        No
+                    </label>
+                    <label>
+                        <input type="radio" name="rating" value="maybe">
+                        Maybe
+                    </label>
+                </p>
+                
+                <p>
+                    <label for="comments">
+                        Comments:
+                    </label>
+                    <br />
+                    <textarea rows="4" cols="40" id="comments"
+                              placeholder="Enter your comments here..."></textarea> <!-- use <textarea> to create larger text input boxes e.g. for user comments. -->
+                </p>                                                                <!-- Use "placeholder" to enter placeholder text in any form control that remains until the user clicks there -->
+                
+                <label>
+                    <input type="checkbox" name="subscribe" checked="checked" />    <!-- use "checkbox" value with "type" attribute to create a checkbox -->
+                    Sign me up for email updates
+                </label>
+                <br />
+                <input type="submit" value="Submit review" />                       <!-- use "submit" value with "type" attribute to create a final submission button -->
+                
+            </fieldset>
+            <br />
+            <br />
+            <br />
+            
+            <fieldset>
+                <legend>Additional form controls not covered in the example above:</legend>
+                <p>
+                    <label>
+                        Password:
+                        <input type="password" name="password" size="30"
+                               maxlength="32" required="required">                  <!-- "password" value for "type" attribute masks characters as they are entered -->
+                    </label>
+                </p>
+                
+                <p>
+                    <label>
+                        Select your interests:
+                        <select name="interests" size="3" multiple="multiple">      <!-- adding the "multiple" attribute will turn a dropdown into a multiple selection box, where users can simultaneously select options -->
+                            <option value="rock">Rock</option>
+                            <option value="pop">Jazz</option>
+                            <option value="blues">Blues</option>
+                            <option value="metal">Metal</option>
+                        </select>
+                    </label>
+                </p>
+                
+                <p>
+                    <label>
+                        Enter your date of birth:
+                        <input type="date" name="dob">                              <!-- html5 has support for formatting a date input -->
+                    </label>
+                </p>
+                
+                <p>
+                    <label>
+                        Upload your introduction:
+                        <input type="file" name="user-introduction" />              <!-- you can use the "file" input type to upload files, as long as the form "method" attribute has "post" value -->
+                        <br />
+                        <input type="image" src="images/submit.jpg" width="60" />   <!-- you can use an image as a submission button just by changing input "type" value to "image" -->
+                    </label>
+                </p>
+            
+            </fieldset>
+        </form>
+    </body>
+</html>

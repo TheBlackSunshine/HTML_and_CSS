@@ -1,0 +1,38 @@
+<!-- using the <table> element, populating data with <tr>, <th> & <td>, spanning a table & working with long tables -->
+
+<html>
+    <head>
+        <title>Tables</title>
+    </head>
+    <body>
+        <table>                     <!-- declare the main table element with <table> -->
+            <thead>                 <!-- this declares the first row of a table, for better readibility and site indexing, especially with long tables -->
+                <tr>                <!-- this declares a row of a table -->
+                    <th></th>       <!-- this declares a table heading (column title) -->
+                    <th scope="col">Home starter hosting</th>
+                    <th scope="col">Premium business hosting</th>
+                </tr>
+            </thead>
+            
+            <tbody>                 <!-- we are finished the header so move on to the next row, the start of the body -->
+                <tr>
+                    <th scope="row">Disk space</th>
+                    <td>250MB</td>  <!-- now instead of declaring headers we are working with the actual table data so use <td> -->
+                    <td>1GB</td>
+                </tr>
+                <tr>
+                    <th scope="row">Bandwidth</th>
+                    <td>5GB per month</td>
+                    <td>50GB per month</td>
+                </tr>
+                <!-- etc. etc. -->
+            </tbody>
+            <tfoot>                 <!-- now we are on the final row so declare a footer -->
+                <tr>                <!-- we want the contents of the last row to span 2 columns, so use the colspan attribute -->
+                    <td></td>
+                    <td colspan="2">Sign up now and save 10%!</td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>
