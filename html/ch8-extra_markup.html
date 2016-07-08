@@ -1,0 +1,29 @@
+<!-- DOCTYPES, identifying elements/classes, grouping blocks/inlines, inline frames, meta information and escape characters -->
+
+<!DOCTYPE html PUBLIC
+    "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd"> <!-- DOCTYPES tell the browser which version of HTML/XML is being used -->
+<html>
+    <head>
+        <meta name="description" content="Telephone, email and directions for The Art Bookshop, London, UK" />  <!-- <meta> contains information about that webpage. It can contain <name> or <http-equiv> attributes -->
+        <title>Contact The Art Bookshop, London UK</title>                                                      <!-- values can include "description", "keywords", "robots", "author", "pragma" and "expires" -->
+    </head>
+    <body>
+        <div id="header">   <!-- <div> groups block-level elements (elements that start on a new line) -->
+            <h1>The Art Bookshop</h1>
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="index.html">new publications</a></li>
+                <li class="current-page"><a href="index.html">contact</a></li>  <!-- "class" attribute identifies classes of elements -->
+            </ul>
+        </div>
+        
+        <div id="content">                                                      <!-- "id" attribute identifies individual elements -->
+            <p>Charing Cross Road, London, WC2, UK</p>
+            <p><span class="contact">Telephone</span> 0207 946 0946</p>         <!-- <span> groups inline elements (elements that continue on the same line) -->
+            <p><span class="contact">Email</span><a href="mailto:books@example.com"> books@example.com</a></p>
+            <iframe width="425" height="275" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.co.uk/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=charing+cross+road+london&amp;output=embed"></iframe>   <!-- <iframe> cuts windows into the webpage through which other webpages can be displayed -->
+        </div>
+        <p>&copy; The Art Bookshop</p>  <!-- escape cahracters allow you to include special/reserved characters such as & (&amp;), £ (&pound;), © (&copy), "/" (&ldquo/&rdquo) etc. -->
+    </body>
+</html>

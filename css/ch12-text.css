@@ -1,0 +1,72 @@
+body {
+    padding: 20px;
+}
+
+h1, h2, h3, a {
+    font-weight: normal;                            /* "font-weight" (light, medium, bold, black) property specifies how bold the text is */
+    color: #0088dd;
+    margin: 0px;
+}
+
+h1 {
+    font-family: Georgia, Times, serif;             /* "font-family" specifies the font used. Multiple values can be used for redundancy. A generic name can be used last, to ensure compatibility */
+    font-size: 250%;                                /* font size can be expressed as a percentage of the default size (12pt) */
+    text-shadow: 2px 2px 3px #666666;               /* "text-shadow" property (right-offset, down-offset, blur, colour) describes a drop shadow on text */
+    padding-bottom: 10px;                           /* you can append a direction to "padding" to specify where the padding applies */
+}
+
+@font-face {                                                                            /* "@font-face" allows you to embed fonts from locations besides the user's computer */
+    font-family: 'Code Pro Regular';                                                    /* first specify an id to refer to when using the font-family */
+    src: url('../fonts/Code_Pro_Demo-webfont.eot');                                     /* specify a primary source */
+    src: url('../fonts/Code_Pro_Demo-webfont.eot?#iefix') format('embedded-opentype'),  /* specify other formats to ensure compatibility */
+         url('../fonts/Code_Pro_Demo-webfont.woff2') format('woff2'),
+         url('../fonts/Code_Pro_Demo-webfont.woff') format('woff'),
+         url('../fonts/Code_Pro_Demo-webfont.ttf') format('truetype'),
+         url('../fonts/Code_Pro_Demo-webfont.svg#code_pro_demoregular') format('svg');
+}                                                                                       /* now we have named the font, pointed to it on our site, and ensured multiple formats */
+
+h2 {
+    /*font-family: "Gill Sans", Arial, sans-serif;*/
+    font-family: "Code Pro Regular";                /* the final step to using @font-face fonts: we select the custom font using the chosen id, just like a regular font-family */
+    font-size: 90%;
+    text-transform: uppercase;                      /* "text-transform" property (lowercase, uppercase, capitalize) can be used to make all characters a specific case, or capitalize the first character of each word */
+    letter-spacing: 0.2em;                          /* space between letters can be expressed as number of "ems" (an em is the width of the  m character). "word-spacing" specifies space between words */
+}
+
+h3 {
+    font-size: 150%;
+}
+
+p {
+    font-family: Arial, Verdana, sans-serif;        /* serif: detail on the ends of letters. sans-serif: straight ends. monospace: letters equal width. cursive: joining strokes/handwriting styles. fantasy: decorative */
+    line-height: 1.4em;                             /* "line-height" property sets the leading size (font height & space above to next line) */
+    color: #665544;
+}
+
+p.description {
+    text-indent: 20px;                              /* "text-indent" property indents the first line of a body of text. It can take negative values to push elements off the page */
+}
+
+p.intro:first-line {                                /* appending :[example] to a selector creates a pseudo-element, meaning a new "box" is created treating that pseudo-element as its own element */
+    font-weight: bold;                              /* here, we are highlighting the pseudo-element "first line" of <p> and making it bold. We didn't create "first-line" but CSS3 auto-recognises this */
+}
+
+.credits {
+    font-style: italic;
+    text-align: right;                              /* "text-align" (left, right, center, justify) controls text alignment */
+    vertical-align: top;                            /* "vertical align" (baseline, sub, super, top, text-top, middle, bottom, text-bottom) controls vertical text alignment with the associated element */
+}
+
+.font_credits {
+    font-style: italic;
+    font-size: 10px;                                /* the third way to express size is in pixels (same as pt) */
+    text-align: right;
+}
+
+a {
+    text-decoration: none;                          /* "text-decoration" (none, uderline, overline, line-through, blink) can be used to remove default text decoration or apply under/over/through-lines */
+}
+
+a:hover {                                           /* here is another pseudo-element. We are applying an underline to links, whenever a user hovers over it with the mouse */
+    text-decoration: underline;                     /* other pseudo-elements include :first-letter, :link, :visited, :active (element executing e.g. button clicked) & :focus (element active e.g. typing into form box) */
+}

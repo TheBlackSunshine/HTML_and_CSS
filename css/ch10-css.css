@@ -1,0 +1,11 @@
+body {                                          /* This is a selector */
+    font-family: Arial, Verdana, sans-serif;    /* This is a declaration. Here we are declaring the "font-family" property, which changes the font od the selected element. */
+}
+
+h1, h2 {
+    color: #ee3e80;                             /* Declarations are made up of a property & a value. Here, "color" is a property that describes text colour, and we assign value "ee3e80" to that property */
+}                                               /* <h1> will inherit the sans-serif font from body because it is a child element in the structure of the html page. You can force inheritance with !inherit */
+
+p {                                             /* Since p is more specific than body, this rule takes precedence. If there were two p rules, the last one would take precedence. You can force precedence with !important */
+    color: #665544;
+}

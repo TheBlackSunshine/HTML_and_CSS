@@ -1,0 +1,58 @@
+body {                                                  /* sets background colour for the overall dynamic browser window, and parameters to inherit */
+    font-size: 80%;
+    font-family: "Courier New", Courier, monospace;
+    letter-spacing: 0.15em;
+    background-color: #efefef;
+}
+
+#page {                                                 /* sets up a more constrained box for the page elements */
+    max-width: 940px;                                   /* important page elements never stretch further than the value of "max-width" & "max-height" properties */
+    max-height: 720px;
+    margin: 10px auto 10px auto;                        /* "margin" (top, right, bottom, left) is the space outside the border of an element */
+    padding: 20px;                                      /* "padding" (top, right, bottom, left) is the space between the border of a box and any elements contained directly within it */
+    border: 4px double #000;                            /* "border" (width (top, right, bottom, left), style, colour) is the edge of the element. */
+    border-color: #000;                                 /* "border-color" (top, right, bottom, left) specifies the colour of the edge of an element */
+    background-color: #ffffff;
+}
+
+#logo {
+    width: 150px;
+    margin: 10px auto 25px auto;                        /* you can set left-margin and right-margin to "auto" value to centre an element on a page */
+}
+
+ul {
+    width: 570px;
+    padding: 15px;
+    margin: 0px auto 0px auto;
+    border-top: 2px solid #000;                         /* you can set the size of a border using words (thin, medium, thick) or pixel (px) values */
+    border-bottom: 1px solid #000;                      /* possible styles include solid, dotted, dashed, double, groove (carved into), ridge (stick out), inset (embedded), outset (coming out), hidden/none */
+    text-align: center;
+}
+
+li {
+    display: inline;                     /* "display" (inline, block, inline-block (flow whilst retaining other block features), none (hides element from page)) forces an element to behave like a specified element type. */
+    margin: 0px 3px;
+}
+
+p {
+    text-align: center;
+    width: 600px;
+    margin: 20px auto 20px auto;
+    font-weight: normal;
+}
+
+#sale {
+    visibility: hidden;                                 /* "visibility" property (hidden, visible) sets whether an element is replaced by blank space on the page (different to dispaly: none) */
+}
+
+a {
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 6px 18px 5px 18px;
+}
+
+a:hover, a.on {
+    color: #cc3333;
+    background-color: #ffffff;
+}

@@ -1,0 +1,24 @@
+<!-- Flash, HTML5 video & audio, supporting different browsers -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flash, Video &amp; Audio</title>
+    <script type="text/javascript"
+            src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script> <!-- we use JavaScript to embed a Flash player. SWFObject script is hosted on Google's servers -->
+    <script type="text/javascript">
+        var flashvars = {};
+        var params = {movie: "../video/puppy.flv"};
+        swfobject.embedSWF("flash/osplayer.swf", "snow", "400", "320", "8.0.0", flashvars, params);</script>    <!-- this tells the browser the location of the file, element it should replace, height/width/version -->
+    </head>
+    
+    <body>
+        <video poster="images/puppy.jpg" width="400" height="320" controls="controls">              <!-- this is the HTML5 video -->
+            <source src="video/puppy.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+            <source src="video/puppy.webm" type='video/webm; codecs="vp8, vorbis"' />               <!-- a second filetype has been added to ensure many browsers are supported -->
+            <div id="snow">                                                                         <!-- this is the element the Flash video should replace. It is shown to a user if their browser doesn't support video -->
+                <p>You cannot see this video of a puppy playing in the snow because this browser does not support our video formats.</p>
+            </div>
+        </video>
+    </body>
+</html>
