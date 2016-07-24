@@ -1,0 +1,49 @@
+body {
+    color: #665544;
+    background-color: #d4d0c6;                              /* we select a backup colour as close to the intended image as possible, in case the browser fails to render the image */
+    background-image: url("../images/backdrop.gif");        /* here, we repeat a background image to give the page texture. Often the last thing to load */
+    background-attachment: scroll;                          /* "background-attachment" (fixed, scroll") specifies whether the image will remain static or scroll with the page as normal */
+    font-family: Georgia, "Times New Roman", sans-serif;
+    text-align: center;
+}
+
+.wrapper {                                                  /* again, wrapper contains all elements to facilitate more convenient manipulation */
+    width: 720px;
+    margin: 0px auto;                                       /* by assigning "margin" a value of "auto" on the right, the element will automatically center no matter the screen size */
+}
+
+.header {
+    margin: 40px 0px 20px 0px;
+}
+
+.entry {
+    width: 220px;
+    float: left;                                            /* we float the images so they span the entirety of the previously-defined max width */
+    margin: 10px;
+    height: 198px;
+    background-image: url("../images/shadow.png");
+    background-repeat: no-repeat;                           /* "background-repeat" (repeat, repeat-x, repeat-y, no-repeat") specifies whether the background image repeats across the element */
+    background-position: bottom;                            /* "background-position" (left/right/center top/center/bottom) describes the location of the background image relative to the container element */
+}
+
+figure {
+    display: block;
+    width: 202px;
+    height: 170px;
+    background-color: #e7e3db;
+    margin: 0px;
+    padding: 9px;
+    text-align: left;
+}
+
+figure img {
+    width: 200px;                                           /* the "width" & "height" properties describe an images size */
+    height: 150px;                                          /* the source image should be this size for efficiency when loading the asset */
+    border: 1px solid #d6d6d6;
+}
+
+figcaption {
+    background-image: url("../images/icon.png");
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
